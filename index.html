@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi sitio en la nube</title>
+<meta name="description" content="Sitio web estático publicado en Cloudflare Pages como práctica de cloud computing.">
+<style>
+  :root {
+    --fondo: #f3f6f9;
+    --texto: #16232f;
+    --suave: #52657a;
+    --acento: #0b6fa4;
+    --linea: #cfd9e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fondo: #101a23; --texto: #e6edf3; --suave: #93a5b8; --acento: #5cb8ea; --linea: #263544; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    line-height: 1.65;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.5rem; }
+  h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; }
+  .intro { font-size: 1.15rem; color: var(--suave); }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--acento); }
+  a:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linea); color: var(--suave); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Mi primer sitio publicado en la nube</h1>
+  <p class="intro">Esta página es un archivo HTML estático. Vive en la red global de Cloudflare y se actualiza cada vez que subo un cambio a mi repositorio.</p>
+
+  <h2>Por qué Cloudflare Pages</h2>
+  <ul>
+    <li>Plan gratuito suficiente para un sitio estático.</li>
+    <li>HTTPS incluido, sin configurar certificados.</li>
+    <li>No hay servidor que mantener ni actualizar.</li>
+  </ul>
+
+  <h2>Cómo administro el contenido</h2>
+  <p>Edito el archivo <code>index.html</code> en mi computadora, guardo los cambios con Git y los envío a GitHub. Cloudflare detecta el cambio y publica la nueva versión en menos de un minuto.</p>
+
+  <footer>Práctica de cloud computing · Autor: <strong>Tu nombre</strong></footer>
+</main>
+</body>
+</html>
